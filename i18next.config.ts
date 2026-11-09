@@ -38,6 +38,7 @@ export default defineConfig({
             "Annotate.*",
             "GoMode.*",
             "Errors.*",
+            "Coach.*",
         ],
         sort: true,
     },

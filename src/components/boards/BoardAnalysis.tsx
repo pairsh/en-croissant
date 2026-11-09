@@ -5,6 +5,7 @@ import {
   IconFileText,
   IconInfoCircle,
   IconNotes,
+  IconSparkles,
   IconTargetArrow,
   IconZoomCheck,
 } from "@tabler/icons-react";
@@ -37,6 +38,7 @@ import MoveControls from "../common/MoveControls";
 import { TreeStateContext } from "../common/TreeStateContext";
 import AnalysisPanel from "../panels/analysis/AnalysisPanel";
 import AnnotationPanel from "../panels/annotation/AnnotationPanel";
+import CoachPanel from "../panels/coach/CoachPanel";
 import DatabasePanel from "../panels/database/DatabasePanel";
 import InfoPanel from "../panels/info/InfoPanel";
 import PracticePanel from "../panels/practice/PracticePanel";
@@ -260,6 +262,9 @@ function BoardAnalysis() {
               <Tabs.Tab value="analysis" leftSection={<IconZoomCheck size="1rem" />}>
                 {t("Board.Tabs.Analysis")}
               </Tabs.Tab>
+              <Tabs.Tab value="coach" leftSection={<IconSparkles size="1rem" />}>
+                {t("Board.Tabs.Coach")}
+              </Tabs.Tab>
               <Tabs.Tab value="database" leftSection={<IconDatabase size="1rem" />}>
                 {t("Board.Tabs.Database")}
               </Tabs.Tab>
@@ -291,6 +296,9 @@ function BoardAnalysis() {
             </Tabs.Panel>
             <Tabs.Panel value="analysis" flex={1} style={{ overflowY: "hidden" }}>
               <AnalysisPanel />
+            </Tabs.Panel>
+            <Tabs.Panel value="coach" flex={1} style={{ overflowY: "hidden" }}>
+              <CoachPanel />
             </Tabs.Panel>
           </Tabs>
         </Paper>
